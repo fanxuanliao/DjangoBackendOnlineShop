@@ -35,10 +35,10 @@ class OrderView(APIView):
             if serializer.is_valid():
 
                 # implement mail notifications
-                subject = "New Order is Placed!"
-                message = "Dear Customer,\n\nYour order has been placed successfully.\n\nThank you for shopping with us.\n\nRegards,\nOnline Shop Team"
-                recipient_list = [data['customer_email']]
-                send_mail(subject,message,EMAIL_HOST_USER,recipient_list,fail_silently=False)
+                # subject = "New Order is Placed!"
+                # message = "Dear Customer,\n\nYour order has been placed successfully.\n\nThank you for shopping with us.\n\nRegards,\nOnline Shop Team"
+                # recipient_list = [data['customer_email']]
+                # send_mail(subject,message,EMAIL_HOST_USER,recipient_list,fail_silently=False)
 
                 serializer.save()
                 return Response({
